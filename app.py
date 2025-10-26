@@ -10,6 +10,8 @@ from IPython.display import Image, HTML, display
 import requests
 from werkzeug.utils import secure_filename
 
+load_dotenv()
+
 AZURE_CONNECTION_STRING=os.getenv("AZURE_CONNECTION_STRING")
 STORAGE_ACCOUNT_URL=os.getenv("STORAGE_ACCOUNT_URL")
 CONTAINER_NAME = "lanternfly-images"
