@@ -6,7 +6,6 @@ from datetime import datetime
 from dotenv import load_dotenv
 import os
 from pathlib import Path
-from IPython.display import Image, HTML, display
 import requests
 from werkzeug.utils import secure_filename
 
@@ -81,6 +80,7 @@ def health():
 @app.get("/")
 def index():
     return render_template("index.html")
+
 if __name__ == "__main__":
     port = int(os.getenv("PORT", "5000"))
     app.run(host="0.0.0.0", port=port, debug=True)
